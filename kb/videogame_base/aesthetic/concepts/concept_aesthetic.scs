@@ -1,0 +1,64 @@
+sc_node_not_relation -> concept_aesthetic;; 
+
+concept_aesthetic => nrel_main_idtf:
+[эстетика](*<-lang_ru;;*);
+[aesthetic](*<-lang_en;;*);;
+
+concept_aesthetic <= nrel_whole_part:
+	...
+	(* 
+	-> concept_visual_perception;;
+	-> concept_sound_perception;;
+	-> concept_tactile_perception;;
+	*);;
+
+//определения и пояснения
+concept_aesthetic <- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf: [Опр. (эстетика)] (*<-lang_ru;;*);;
+	<-sc_definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_definition:
+			[Эстетика описывает, как игра воспринимается тремя органами чувств: зрение, слух, осязание. Эстетика охватывает все, от звукового сопровождения в игре до моделей персонажей, упаковки и оформления обложки. Эстетика обозначает активы, созданные разработчиками, такие как
+фактическое художественное и звуковое оформление игры.](*<-lang_ru;;*);;
+		*);;
+	*);;
+	
+//утверждения
+concept_aesthetic <- rrel_key_sc_element:
+	... 
+	(*
+	=> nrel_main_idtf: [Утв.(эстетика,эмоциональные реакции*,игрок,игра)] (* <- lang_ru;; *);;
+	<- sc_statement;;
+	<= nrel_sc_text_translation: 
+		...
+		(*
+		-> rrel_example: 
+			[Эстетика вызывает эмоциональные реакции у игрока, когда он взаимодействует с игрой.](* <- lang_ru;; *);;
+		*);;
+	*);
+		... 
+		(*
+		=> nrel_main_idtf: [Утв.(эстетика,эмоциональное настроение*,игра)] (* <- lang_ru;; *);;
+		<- sc_statement;;
+		<= nrel_sc_text_translation: 
+			...
+			(*
+			-> rrel_example: 
+				[Эстетика оказывает фантастическую помощь в создании эмоционального настроения в игре.](* <- lang_ru;; *);;
+			*);;
+		*);
+		...
+		(*
+		=> nrel_main_idtf: [Утв.(эстетика,информация,игра)] (* <- lang_ru;; *);;
+		<- sc_statement;;
+		<= nrel_sc_text_translation: 
+			...
+			(*
+			-> rrel_example: 
+				[Эстетика может давать игроку дополнительную информацию, например выделение игровых объектов определённым цветом, проигрование определённой музыки при приближении врагов.](* <- lang_ru;; *);;
+			*);;	
+*);;

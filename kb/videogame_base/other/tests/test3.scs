@@ -1,0 +1,19 @@
+weapon1
+<- concept_weapon;
+=> nrel_main_idtf:
+	[Weapon 1]
+	(* <- lang_en;; <- name_en;;*);
+	[Оружие 1]
+	(* <- lang_ru;; <- name_ru;; <- name;;*);
+	
+=> nrel_shots_count:
+	4(*=>nrel_main_idtf: [4];;*);
+=> nrel_shot_damage:
+	2(*=>nrel_main_idtf: [2];;*);
+=> nrel_to_hit:
+	2(*=>nrel_main_idtf: [2];;*);
+=> nrel_to_hit:
+	3(*=>nrel_main_idtf: [3];;*);
+=> nrel_to_hit:
+	4(*=>nrel_main_idtf: [4];;*);;
+

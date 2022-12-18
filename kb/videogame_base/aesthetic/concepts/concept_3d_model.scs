@@ -1,0 +1,47 @@
+sc_node_not_relation -> concept_3d_model;; 
+
+concept_3d_model => nrel_main_idtf:
+[3D модель](*<-lang_ru;;*);
+[3D model](*<-lang_en;;*);;
+
+
+//определения и пояснения
+concept_3d_model <- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf: [Опр. (3D модель)] (*<-lang_ru;;*);;
+	<-sc_definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_definition:
+			[3D модель – это объемное цифровое изображение необходимого объекта, как реального, так и вымышленного.](*<-lang_ru;;*);;
+		*);;
+	*);;
+	
+//утверждения
+concept_3d_model <- rrel_key_sc_element:
+	... 
+	(*
+	=> nrel_main_idtf: [Утв.(3D модель, специальное программное обеспечение)] (* <- lang_ru;; *);;
+	<- sc_statement;;
+	<= nrel_sc_text_translation: 
+		...
+		(*
+		-> rrel_example: 
+			[Создание 3D моделей происходит в специальном программном обеспечении для 3D моделирования.](* <- lang_ru;; *);;
+		*);;
+	*);;
+
+concept_3d_model <- rrel_key_sc_element:...
+	(*
+		<-illustration;;
+		<=nrel_sc_text_translation:...
+	(*
+		->rrel_example:
+		"file://images//3dmodel.png"
+	(*
+		=>nrel_format:format_png;;
+	*);;	
+*);;
+*);;

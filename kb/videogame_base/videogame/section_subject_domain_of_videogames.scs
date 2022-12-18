@@ -1,0 +1,39 @@
+sc_node_struct -> section_subject_domain_of_videogames;;
+
+section_subject_domain_of_videogames => nrel_main_idtf:
+	[Раздел. Предметная область видеоигр]
+	(* <- lang_ru;; *);
+	[Section. Subject domain of videogames]
+	(* <- lang_en;; *);
+<- non_atomic_section;;
+
+section_subject_domain_of_videogames <- nrel_system_identifier;;
+
+section_subject_domain_of_videogames <= nrel_section_decomposition: {
+	
+	 section_subject_domain_of_mechanic;
+	 section_subject_domain_of_aesthetic;
+	 section_subject_domain_of_technology;
+	 section_subject_domain_of_story
+
+};;
+
+section_subject_domain_of_videogames -> rrel_key_sc_element:
+	subject_domain_of_videogames;
+	concept_videogame;;
+	
+section_subject_domain_of_videogames = [*
+	subject_domain_of_videogames => nrel_main_idtf:
+		[Предметная область видеоигр] (* <- lang_ru;; *);
+		[Subject domain of videogames] (* <- lang_en;; *);
+	<- subject_domain;;
+	
+	subject_domain_of_videogames => nrel_private_subject_domain:
+		 subject_domain_of_mechanic;
+		 subject_domain_of_aesthetic;
+		 subject_domain_of_technology;
+		 subject_domain_of_story;;
+	
+	subject_domain_of_videogames -> rrel_maximum_studied_object_class:
+		concept_videogame;;
+*];;

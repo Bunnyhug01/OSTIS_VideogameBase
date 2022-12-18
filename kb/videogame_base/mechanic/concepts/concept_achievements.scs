@@ -1,0 +1,47 @@
+sc_node_not_relation -> concept_achievements;; 
+
+concept_achievements => nrel_main_idtf:
+[достижения](*<-lang_ru;;*);
+[achievements](*<-lang_en;;*);;
+
+
+//определения и пояснения
+concept_achievements <- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf: [Опр. (достижения)] (*<-lang_ru;;*);;
+	<-sc_definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_definition:
+			[Достижения - это награды за определенные действия игрока (набранные очки, открытые локации, победы и многое другое).](*<-lang_ru;;*);;
+		*);;
+	*);;
+	
+//утверждения
+concept_achievements <- rrel_key_sc_element:
+	... 
+	(*
+	=> nrel_main_idtf: [Утв.(достижения, многопользовательские игры, однопользовательские игры)] (* <- lang_ru;; *);;
+	<- sc_statement;;
+	<= nrel_sc_text_translation: 
+		...
+		(*
+		-> rrel_example: 
+			[В многопользовательских играх достижения представлены значками, в однопользовательских играх игроки поощряются уровнями и особой экипировкой.](* <- lang_ru;; *);;
+		*);;
+	*);;
+	
+concept_achievements <- rrel_key_sc_element:...
+	(*
+		<-illustration;;
+		<=nrel_sc_text_translation:...
+	(*
+		->rrel_example:
+		"file://images//achievments.png"
+	(*
+		=>nrel_format:format_png;;
+	*);;	
+*);;
+*);;

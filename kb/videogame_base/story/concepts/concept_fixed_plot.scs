@@ -1,0 +1,30 @@
+sc_node_not_relation -> concept_fixed_plot;; 
+
+concept_fixed_plot => nrel_main_idtf:
+[фиксированный сюжет](*<-lang_ru;;*);
+[fixed plot](*<-lang_en;;*);;
+
+concept_fixed_plot <= nrel_whole_part:
+	...
+	(* 
+	-> concept_conception;;
+	-> concept_environment;;
+	-> concept_character;;
+	-> concept_story;;
+	*);;
+
+//определения и пояснения
+concept_fixed_plot <- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf: [Опр. (фиксированный сюжет)] (*<-lang_ru;;*);;
+	<-sc_definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_definition:
+			[Фиксированный сюжет - предварительно написанная история и заранее созданные персонажи,
+участвующие в игре.](*<-lang_ru;;*);;
+		*);;
+	*);;
+	

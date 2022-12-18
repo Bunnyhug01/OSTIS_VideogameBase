@@ -1,0 +1,44 @@
+sc_node_not_relation -> concept_visual_perception;; 
+
+concept_visual_perception => nrel_main_idtf:
+[визуальное восприятие](*<-lang_ru;;*);
+[visual perception](*<-lang_en;;*);;
+
+//разбиение
+concept_visual_perception <= nrel_subdividing:
+	...
+	(* 
+	-> concept_texture;;
+	-> concept_sprite;;
+	-> concept_3d_model;;
+	-> concept_visual_effects;;
+	*);;
+
+
+//определения и пояснения
+concept_visual_perception <- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf: [Опр. (визуальное восприятие)] (*<-lang_ru;;*);;
+	<-sc_definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_definition:
+			[Визуальное восприятие - видимые элементы игры, т.е. всё, что игрок видит.](*<-lang_ru;;*);;
+		*);;
+	*);;
+	
+//утверждения
+concept_visual_perception <- rrel_key_sc_element:
+	... 
+	(*
+	=> nrel_main_idtf: [Утв.(разработчики, визуальное восприятие)] (* <- lang_ru;; *);;
+	<- sc_statement;;
+	<= nrel_sc_text_translation: 
+		...
+		(*
+		-> rrel_example: 
+			[Разработчики уделяют больше всего внимания визуальному восприятию.](* <- lang_ru;; *);;
+		*);;
+	*);;

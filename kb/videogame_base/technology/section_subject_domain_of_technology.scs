@@ -1,0 +1,28 @@
+sc_node_struct -> section_subject_domain_of_technology;;
+
+section_subject_domain_of_technology => nrel_main_idtf:
+	[Раздел. Предметная область технологии]
+	(* <- lang_ru;; *);
+	[Section. Subject domain of technology]
+	(* <- lang_en;; *);
+<- non_atomic_section;;
+
+section_subject_domain_of_technology <- nrel_system_identifier;;
+
+section_subject_domain_of_technology -> rrel_key_sc_element:
+	subject_domain_of_technology;
+	concept_technology;
+	concept_game_engine;;
+	
+section_subject_domain_of_technology = [*
+	subject_domain_of_technology => nrel_main_idtf:
+		[Предметная область технологии] (* <- lang_ru;; *);
+		[Subject domain of technology] (* <- lang_en;; *);
+	<- subject_domain;;
+	
+	subject_domain_of_technology => nrel_private_subject_domain:
+		 subject_domain_of_technology;;
+	
+	subject_domain_of_technology -> rrel_maximum_studied_object_class:
+		concept_technology;;
+*];;

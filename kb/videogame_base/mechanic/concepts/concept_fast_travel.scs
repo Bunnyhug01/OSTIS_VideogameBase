@@ -1,0 +1,47 @@
+sc_node_not_relation -> concept_fast_travel;; 
+
+concept_fast_travel => nrel_main_idtf:
+[быстрое перемещение](*<-lang_ru;;*);
+[fast travel](*<-lang_en;;*);;
+
+
+//определения и пояснения
+concept_fast_travel <- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf: [Опр.(быстрое перемещение)] (*<-lang_ru;;*);;
+	<-sc_definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_definition:
+			[Быстрое перемещение — это механика, которая позволяет моментально менять местоположение игрока в пространстве.](*<-lang_ru;;*);;
+		*);;
+	*);;
+	
+//утверждения
+concept_fast_travel <- rrel_key_sc_element:
+	... 
+	(*
+	=> nrel_main_idtf: [Утв.(быстрое перемещение,карта игрового мира)] (* <- lang_ru;; *);;
+	<- sc_statement;;
+	<= nrel_sc_text_translation: 
+		...
+		(*
+		-> rrel_example: 
+			[Быстрое перемещение чаще всего осуществляется через карту игрового мира.](* <- lang_ru;; *);;
+		*);;
+	*);;
+	
+concept_fast_travel <- rrel_key_sc_element:...
+	(*
+		<-illustration;;
+		<=nrel_sc_text_translation:...
+	(*
+		->rrel_example:
+		"file://images//Fast_Travel.jpg"
+	(*
+		=>nrel_format:format_jpg;;
+	*);;	
+*);;
+*);;

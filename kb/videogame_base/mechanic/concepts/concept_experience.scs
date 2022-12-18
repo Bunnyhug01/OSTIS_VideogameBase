@@ -1,0 +1,35 @@
+sc_node_not_relation -> concept_experience;; 
+
+concept_experience => nrel_main_idtf:
+[очки опыта](*<-lang_ru;;*);
+[XP](*<-lang_en;;*);;
+
+
+//определения и пояснения
+concept_experience <- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf: [Опр. (очки опыта)] (*<-lang_ru;;*);;
+	<-sc_definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_definition:
+			[Очки опыта (XP) в компьютерных и/или ролевых играх — вознаграждение, выражаемое в числовой форме, получаемое игроком за успешное выполнение тех или иных действий, часто — уничтожение врагов. ](*<-lang_ru;;*);;
+		*);;
+	*);;
+	
+//утверждения
+concept_experience <- rrel_key_sc_element:
+	... 
+	(*
+	=> nrel_main_idtf: [Утв.(очки опыта, уровень)] (* <- lang_ru;; *);;
+	<- sc_statement;;
+	<= nrel_sc_text_translation: 
+		...
+		(*
+		-> rrel_example: 
+			[Накопление очков опыта при достижении некоторого порогового значения ведёт к повышению уровня.](* <- lang_ru;; *);;
+		*);;
+	*);;
+

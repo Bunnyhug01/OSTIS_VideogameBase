@@ -1,0 +1,20 @@
+sc_node_not_relation -> concept_health;; 
+
+concept_health => nrel_main_idtf:
+[очки здоровья](*<-lang_ru;;*);
+[health points](*<-lang_en;;*);;
+
+
+//определения и пояснения
+concept_health <- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf: [Опр. (очки здоровья)] (*<-lang_ru;;*);;
+	<-sc_definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_definition:
+			[Очки здоровья — величина в ролевых и компьютерных играх, определяющая максимальное количество урона, которое может получить объект.](*<-lang_ru;;*);;
+		*);;
+	*);;

@@ -1,0 +1,44 @@
+sc_node_not_relation -> concept_mechanic;; 
+
+concept_mechanic => nrel_main_idtf:
+[механика](*<-lang_ru;;*);
+[mechanic](*<-lang_en;;*);;
+
+//разбиение
+concept_mechanic <= nrel_basic_decomposition:
+	...
+	(* 
+	-> concept_moving;;
+	-> concept_shooting;;
+	-> concept_trade;;
+	-> concept_experience;;
+	-> concept_achievements;;
+	*);;
+
+//определения и пояснения
+concept_mechanic <- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf: [Опр. (механика)] (*<-lang_ru;;*);;
+	<-sc_definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_definition:
+			[Механика - правила взаимодействия игрока с игрой.](*<-lang_ru;;*);;
+		*);;
+	*);;
+	
+//утверждения
+concept_mechanic <- rrel_key_sc_element:
+	... 
+	(*
+	=> nrel_main_idtf: [Утв.(механика,неинтерактивне формы передачи информации)] (* <- lang_ru;; *);;
+	<- sc_statement;;
+	<= nrel_sc_text_translation: 
+		...
+		(*
+		-> rrel_example: 
+			[Механика — это элемент, который отличает игры от всех неинтерактивных форм передачи информации (таких, как фильмы или книги).](* <- lang_ru;; *);;
+		*);;
+	*);;

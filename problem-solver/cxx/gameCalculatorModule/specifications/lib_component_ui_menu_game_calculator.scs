@@ -1,0 +1,11 @@
+lib_component_ui_menu_game_calculator
+=> nrel_main_idtf:
+	[Компонент библиотеки. Команда пользовательского интерфейса игрового калькулятора]
+	(* <- lang_ru;; *);
+	[Library component. User interfaces command of game calculator]
+	(* <- lang_en;; *);
+
+<- library_of_platform_independent_reusable_components;
+<- library_of_atomic_reusable_components;;
+
+lib_component_ui_menu_game_calculator = [*^"file://ui_menu_game_calculator.scsi"*];;

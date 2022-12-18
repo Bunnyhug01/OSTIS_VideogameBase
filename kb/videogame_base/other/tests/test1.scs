@@ -1,0 +1,22 @@
+gamer1
+<- concept_gamer;
+=> nrel_main_idtf:
+	[Gamer 1]
+	(* <- lang_en;; <- name_en;;*);
+	[Игрок 1]
+	(* <- lang_ru;; <- name_ru;; <- name;;*);
+	
+=> nrel_health:
+	100(*=>nrel_main_idtf: [100];;*);
+=> nrel_armor:
+	20(*=>nrel_main_idtf: [20];;*);
+=> nrel_weapon_damage:
+	30(*=>nrel_main_idtf: [30];;*);
+=> nrel_weapon_skill:
+	2(*=>nrel_main_idtf: [2*];;*);
+=> nrel_health_skill:
+	10(*=>nrel_main_idtf: [10%];;*);
+=> nrel_crit:
+	50(*=>nrel_main_idtf: [50];;*);
+=> nrel_dodge:
+	50(*=>nrel_main_idtf: [50];;*);;

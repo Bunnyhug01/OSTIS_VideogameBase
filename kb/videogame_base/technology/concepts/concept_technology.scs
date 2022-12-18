@@ -1,0 +1,42 @@
+sc_node_not_relation -> concept_technology;; 
+
+concept_technology => nrel_main_idtf:
+[технология](*<-lang_ru;;*);
+[technology](*<-lang_en;;*);;
+
+//разбиение
+concept_technology <= nrel_subdividing:
+	...
+	(* 
+	-> concept_game_engine;;
+	*);;
+
+//определения и пояснения
+concept_technology <- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf: [Опр. (технология)] (*<-lang_ru;;*);;
+	<-sc_definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_definition:
+			[Технология охватывает все технологии, заставляющие игру
+работать. Сюда относятся такие составляющие, как
+аппаратное и программное обеспечение, конвейеры отображения и т.д.](*<-lang_ru;;*);;
+		*);;
+	*);;
+	
+//утверждения
+concept_technology <- rrel_key_sc_element:
+	... 
+	(*
+	=> nrel_main_idtf: [Утв.(технология,программисты)] (* <- lang_ru;; *);;
+	<- sc_statement;;
+	<= nrel_sc_text_translation: 
+		...
+		(*
+		-> rrel_example: 
+			[Технологии для видеоигр разрабатываются программистами.](* <- lang_ru;; *);;
+		*);;
+	*);;

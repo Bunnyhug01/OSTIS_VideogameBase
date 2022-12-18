@@ -1,0 +1,47 @@
+sc_node_role_relation -> rrel_denouement;; 
+
+rrel_denouement => nrel_main_idtf:
+[развязка*](*<-lang_ru;;*);
+[denouement*](*<-lang_en;;*);;
+
+rrel_denouement <- ...(*
+	<- sc_node_not_relation;;
+	<- arity;;
+	=> number_one;;
+*);;
+
+rrel_denouement
+ 	=> nrel_first_domain: concept_story;;
+ 	
+rrel_denouement
+ 	-> transitive_relation;
+ 	-> antireflexive_relation;
+ 	-> antisymmetric_relation;;
+
+//определения и пояснения
+rrel_denouement <- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf: [Опр. (развязка*)] (*<-lang_ru;;*);;
+	<-sc_definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_definition:
+			[Развязка* - элемент сюжета, в котором разрешается конфликт и исчерпываются события, изображённые в произведении.](*<-lang_ru;;*);;
+		*);;
+	*);;
+	
+//утверждения
+rrel_denouement <- rrel_key_sc_element:
+	... 
+	(*
+	=> nrel_main_idtf: [Утв.(развязка*, главный герой, успех*, неудача*)] (* <- lang_ru;; *);;
+	<- sc_statement;;
+	<= nrel_sc_text_translation: 
+		...
+		(*
+		-> rrel_example: 
+			[В результате развязки главный герой либо добивается успеха, либо терпит неудачу.](* <- lang_ru;; *);;
+		*);;
+	*);;

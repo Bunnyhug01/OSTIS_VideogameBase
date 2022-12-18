@@ -1,0 +1,45 @@
+sc_node_not_relation -> concept_game_character;; 
+
+concept_game_character => nrel_main_idtf:
+[игровой персонаж](*<-lang_ru;;*);
+[game character](*<-lang_en;;*);;
+
+//разбиение
+concept_game_character <= nrel_basic_decomposition:
+	...
+	(* 
+	-> concept_health;;
+	-> concept_weapon;;
+	-> concept_armor;;
+	-> concept_experience;;
+	-> concept_moving;;
+	-> concept_skill;;
+	*);;
+
+//определения и пояснения
+concept_game_character <- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf: [Опр. (игровой персонаж)] (*<-lang_ru;;*);;
+	<-sc_definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_definition:
+			[Игровой персонаж — обозначение персонажа в компьютерных играх, который управляется человеком-игроком.](*<-lang_ru;;*);;
+		*);;
+	*);;
+	
+//утверждения
+concept_game_character <- rrel_key_sc_element:
+	... 
+	(*
+	=> nrel_main_idtf: [Утв.(игровой персонаж,неигровой персонаж)] (* <- lang_ru;; *);;
+	<- sc_statement;;
+	<= nrel_sc_text_translation: 
+		...
+		(*
+		-> rrel_example: 
+			[Управление человеком отделяет игровые персонажи от неигровых, управляемых игровым искусственным интеллектом..](* <- lang_ru;; *);;
+		*);;
+	*);;

@@ -1,0 +1,46 @@
+sc_node_not_relation -> concept_game_engine;; 
+
+concept_game_engine => nrel_main_idtf:
+[игровой движок](*<-lang_ru;;*);
+[game_engine](*<-lang_en;;*);;
+
+//определения и пояснения
+concept_game_engine <- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf: [Опр. (игровой движок)] (*<-lang_ru;;*);;
+	<-sc_definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_definition:
+			[Игровой движок – это основное ядро видеоигры, базовое программное обеспечение, на основе которого строятся все остальные составляющие видеоигры.](*<-lang_ru;;*);;
+		*);;
+	*);;
+	
+//утверждения
+concept_game_engine <- rrel_key_sc_element:
+	... 
+	(*
+	=> nrel_main_idtf: [Утв.(игровой движок,жанры видеоигр)] (* <- lang_ru;; *);;
+	<- sc_statement;;
+	<= nrel_sc_text_translation: 
+		...
+		(*
+		-> rrel_example: 
+			[Как правило, игровые движки специализированы в рамках жанра видеоигр.](* <- lang_ru;; *);;
+		*);;
+	*);;
+	
+concept_game_engine <- rrel_key_sc_element:...
+	(*
+		<-illustration;;
+		<=nrel_sc_text_translation:...
+	(*
+		->rrel_example:
+		"file://images//game_engine.jpg"
+	(*
+		=>nrel_format:format_jpg;;
+	*);;	
+*);;
+*);;

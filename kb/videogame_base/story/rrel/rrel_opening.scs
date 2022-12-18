@@ -1,0 +1,47 @@
+sc_node_role_relation -> rrel_opening;; 
+
+rrel_opening => nrel_main_idtf:
+[завязка*](*<-lang_ru;;*);
+[opening*](*<-lang_en;;*);;
+
+rrel_opening <- ...(*
+	<- sc_node_not_relation;;
+	<- arity;;
+	=> number_one;;
+*);;
+
+rrel_opening
+ 	=> nrel_first_domain: concept_story;;
+
+rrel_opening
+ 	-> transitive_relation;
+ 	-> antireflexive_relation;
+ 	-> antisymmetric_relation;;
+
+//определения и пояснения
+rrel_opening <- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf: [Опр. (завязка*)] (*<-lang_ru;;*);;
+	<-sc_definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_definition:
+			[Завязка* описывает сюжетный замысел, окружение и знакомит с основными героями.](*<-lang_ru;;*);;
+		*);;
+	*);;
+	
+//утверждения
+rrel_opening <- rrel_key_sc_element:
+	... 
+	(*
+	=> nrel_main_idtf: [Утв.(завязка*, противоречия*, конфликты*)] (* <- lang_ru;; *);;
+	<- sc_statement;;
+	<= nrel_sc_text_translation: 
+		...
+		(*
+		-> rrel_example: 
+			[Завязка или обнаруживает уже имевшиеся противоречия, или сама создаёт конфликты](* <- lang_ru;; *);;
+		*);;
+	*);;

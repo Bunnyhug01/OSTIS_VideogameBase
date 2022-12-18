@@ -1,0 +1,20 @@
+sc_node_not_relation -> concept_weapon;; 
+
+concept_weapon => nrel_main_idtf:
+[оружие](*<-lang_ru;;*);
+[weapon](*<-lang_en;;*);;
+
+
+//определения и пояснения
+concept_weapon <- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf: [Опр. (оружие)] (*<-lang_ru;;*);;
+	<-sc_definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_definition:
+			[Оружие — устройства и предметы, конструктивно предназначенные для поражения живой или иной цели, предмет для нападения и в меньшей степени обороны.](*<-lang_ru;;*);;
+		*);;
+	*);;

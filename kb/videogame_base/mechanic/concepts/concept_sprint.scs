@@ -1,0 +1,33 @@
+sc_node_not_relation -> concept_sprint;; 
+
+concept_sprint => nrel_main_idtf:
+[спринт](*<-lang_ru;;*);
+[sprint](*<-lang_en;;*);;
+
+//определения и пояснения
+concept_sprint <- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf: [Опр.(спринт)] (*<-lang_ru;;*);;
+	<-sc_definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_definition:
+			[Спринт - вид перемещения, при котором игровой персонаж двигается с максимальной скоростью(заданной разработчиками).](*<-lang_ru;;*);;
+		*);;
+	*);;
+	
+//утверждения
+concept_sprint <- rrel_key_sc_element:
+	... 
+	(*
+	=> nrel_main_idtf: [Утв.(спринт, перемещение)] (* <- lang_ru;; *);;
+	<- sc_statement;;
+	<= nrel_sc_text_translation: 
+		...
+		(*
+		-> rrel_example: 
+			[Спринт является самым быстрым вариантом перемещения.](* <- lang_ru;; *);;
+		*);;
+	*);;

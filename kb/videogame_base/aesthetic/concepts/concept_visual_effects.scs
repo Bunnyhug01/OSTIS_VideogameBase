@@ -1,0 +1,47 @@
+sc_node_not_relation -> concept_visual_effects;; 
+
+concept_visual_effects => nrel_main_idtf:
+[vfx](*<-lang_ru;;*);
+[vfx](*<-lang_en;;*);;
+
+
+//определения и пояснения
+concept_visual_effects <- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf: [Опр. (vfx)] (*<-lang_ru;;*);;
+	<-sc_definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_definition:
+			[VFX (Visual Effects) - это визуальные эффекты, которые добавляются в фильм, игру, рекламу или клип на этапе постпродакшена (после реальных съемок, если речь идет о кино, или перед релизом, если говорим об видеоигре).](*<-lang_ru;;*);;
+		*);;
+	*);;
+	
+//утверждения
+concept_visual_effects <- rrel_key_sc_element:
+	... 
+	(*
+	=> nrel_main_idtf: [Утв.(vfx, интерактивный маркер, геймплей*)] (* <- lang_ru;; *);;
+	<- sc_statement;;
+	<= nrel_sc_text_translation: 
+		...
+		(*
+		-> rrel_example: 
+			[В геймдеве VFX используют не просто как способ сделать игру «красивой», а и как интерактивный маркер, который непосредственно влияет на геймплей.](* <- lang_ru;; *);;
+		*);;
+	*);;
+	
+concept_visual_effects <- rrel_key_sc_element:...
+	(*
+		<-illustration;;
+		<=nrel_sc_text_translation:...
+	(*
+		->rrel_example:
+		"file://images//vfx.jpg"
+	(*
+		=>nrel_format:format_jpg;;
+	*);;	
+*);;
+*);;

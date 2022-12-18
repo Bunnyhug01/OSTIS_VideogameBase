@@ -1,0 +1,46 @@
+sc_node_not_relation -> concept_hard_currency;; 
+
+concept_hard_currency => nrel_main_idtf:
+[твёрдая валюта](*<-lang_ru;;*);
+[hard currency](*<-lang_en;;*);;
+
+//определения и пояснения
+concept_hard_currency <- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf: [Опр. (твёрдая валюта)] (*<-lang_ru;;*);;
+	<-sc_definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_definition:
+			[Твёрдая валюта - универсальное платёжное средство. С её помощью можно покупать не только предметы в игрее, но и другую внутриигровую валюту.](*<-lang_ru;;*);;
+		*);;
+	*);;
+	
+//утверждения
+concept_hard_currency <- rrel_key_sc_element:
+	... 
+	(*
+	=> nrel_main_idtf: [Утв.(твёрдая валюта, денежная единица)] (* <- lang_ru;; *);;
+	<- sc_statement;;
+	<= nrel_sc_text_translation: 
+		...
+		(*
+		-> rrel_example: 
+			[Твёрдая валюта покупается игроками за реальные денежные единицы, но ,в редких случаях, может быть получена бесплатно.](* <- lang_ru;; *);;
+		*);;
+	*);;
+	
+concept_hard_currency <- rrel_key_sc_element:...
+	(*
+		<-illustration;;
+		<=nrel_sc_text_translation:...
+	(*
+		->rrel_example:
+		"file://images//hard_currency.jpg"
+	(*
+		=>nrel_format:format_jpg;;
+	*);;	
+*);;
+*);;

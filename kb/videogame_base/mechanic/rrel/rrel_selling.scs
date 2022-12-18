@@ -1,0 +1,48 @@
+sc_node_role_relation -> rrel_selling;; 
+
+rrel_selling => nrel_main_idtf:
+[продажа*](*<-lang_ru;;*);
+[selling*](*<-lang_en;;*);;
+
+rrel_selling <- ...(*
+	<- sc_node_not_relation;;
+	<- arity;;
+	=> number_two;;
+*);;
+
+rrel_selling
+ 	=> nrel_first_domain: concept_gamer;
+ 	=> nrel_second_domain: concept_trader;;
+ 	
+rrel_selling
+ 	-> antitransitive_relation;
+ 	-> antireflexive_relation;
+ 	-> antisymmetric_relation;;
+
+//определения и пояснения
+rrel_selling <- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf: [Опр. (продажа*)] (*<-lang_ru;;*);;
+	<-sc_definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_definition:
+			[Продажа* - часть торговли, в которой игрок получает внутриигровую валюту за игровые предметы.](*<-lang_ru;;*);;
+		*);;
+	*);;
+	
+//утверждения
+rrel_selling <- rrel_key_sc_element:
+	... 
+	(*
+	=> nrel_main_idtf: [Утв.(продажа*,игровые предметы)] (* <- lang_ru;; *);;
+	<- sc_statement;;
+	<= nrel_sc_text_translation: 
+		...
+		(*
+		-> rrel_example: 
+			[Продажа возможна лишь тогда, когда у игрока имеются игровые предметы.](* <- lang_ru;; *);;
+		*);;
+	*);;

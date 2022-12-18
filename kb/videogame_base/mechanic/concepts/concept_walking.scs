@@ -1,0 +1,33 @@
+sc_node_not_relation -> concept_walking;; 
+
+concept_walking => nrel_main_idtf:
+[ходьба](*<-lang_ru;;*);
+[walking](*<-lang_en;;*);;
+
+//определения и пояснения
+concept_walking <- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf: [Опр.(ходьба)] (*<-lang_ru;;*);;
+	<-sc_definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_definition:
+			[Ходьба - вид перемещения, при котором игровой персонаж двигается медленно.](*<-lang_ru;;*);;
+		*);;
+	*);;
+	
+//утверждения
+concept_walking <- rrel_key_sc_element:
+	... 
+	(*
+	=> nrel_main_idtf: [Утв.(ходьба, перемещение)] (* <- lang_ru;; *);;
+	<- sc_statement;;
+	<= nrel_sc_text_translation: 
+		...
+		(*
+		-> rrel_example: 
+			[Ходьба является самым медленным вариантом перемещения.](* <- lang_ru;; *);;
+		*);;
+	*);;

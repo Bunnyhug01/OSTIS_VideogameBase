@@ -1,0 +1,53 @@
+sc_node_not_relation -> concept_game_currency;; 
+
+concept_game_currency => nrel_main_idtf:
+[внутриигровая валюта](*<-lang_ru;;*);
+[game currency](*<-lang_en;;*);;
+
+concept_game_currency <= nrel_subdividing:
+	...
+	(* 
+	-> concept_hard_currency;;
+	-> concept_soft_currency;;
+	*);;
+
+//определения и пояснения
+concept_game_currency <- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf: [Опр. (внутриигровая валюта)] (*<-lang_ru;;*);;
+	<-sc_definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_definition:
+			[Внутриигровая валюта - средство обмена, используемое при торговле и позволяющее приобретать игровые предметы.](*<-lang_ru;;*);;
+		*);;
+	*);;
+	
+//утверждения
+concept_game_currency <- rrel_key_sc_element:
+	... 
+	(*
+	=> nrel_main_idtf: [Утв.(внутриигровая валюта,твёрдая валюта, мягкая валюта)] (* <- lang_ru;; *);;
+	<- sc_statement;;
+	<= nrel_sc_text_translation: 
+		...
+		(*
+		-> rrel_example: 
+			[Существуют различные виды внутриигровой валюты, например твёрдая и мягкая валюты.](* <- lang_ru;; *);;
+		*);;
+	*);;
+	
+concept_game_currency <- rrel_key_sc_element:...
+	(*
+		<-illustration;;
+		<=nrel_sc_text_translation:...
+	(*
+		->rrel_example:
+		"file://images//videogame_currency.png"
+	(*
+		=>nrel_format:format_png;;
+	*);;	
+*);;
+*);;

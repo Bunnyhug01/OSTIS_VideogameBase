@@ -1,0 +1,29 @@
+ui_menu_game_calculator <- ui_user_command_class_atom; ui_user_command_class_view_kb; ui_one_argument_command_class;;
+
+ui_menu_game_calculator 
+=> nrel_main_idtf: 
+	[Какова эффективность?]
+	(* <- lang_ru;; *);
+=> nrel_idtf: 
+	[Запрос вычисления эффективности указанной сущности]
+	(* <- lang_ru;; *);;
+
+ui_menu_game_calculator 
+=> nrel_main_idtf: 
+	[What effectiveness?]
+	(* <- lang_en;; *);
+=> nrel_idtf: 
+	[Find request for effectiveness of the specified entity]
+	(* <- lang_en;; *);;
+
+ui_menu_game_calculator => ui_nrel_command_template:
+	[*
+		question_game_calculator _-> ._question_game_calculator_instance
+			(*
+				_-> ui_arg_1;;
+			*);;
+		._question_game_calculator_instance _<- question;;
+	*];;
+
+ui_menu_game_calculator => ui_nrel_command_lang_template: [Какова эффективность $ui_arg_1] (* <- lang_ru;; *);;
+ui_menu_game_calculator => ui_nrel_command_lang_template: [What effectiveness $ui_arg_1] (* <- lang_en;; *);;

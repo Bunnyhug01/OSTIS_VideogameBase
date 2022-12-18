@@ -1,0 +1,33 @@
+sc_node_not_relation -> concept_story;; 
+
+concept_story => nrel_main_idtf:
+[сюжет](*<-lang_ru;;*);
+[story](*<-lang_en;;*);;
+
+concept_story <= nrel_whole_part:
+	...
+	(* 
+	-> rrel_opening;;
+	-> rrel_growing_action;;
+	-> rrel_culmination;;
+	-> rrel_downward_action;;
+	-> rrel_denouement;;
+	*);;
+
+//определения и пояснения
+concept_story <- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf: [Опр. (сюжет)] (*<-lang_ru;;*);;
+	<-sc_definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_definition:
+			[Сюжет - это последовательность событий, происходящих в повествовании.
+Обычно заключается в описании того, как главный герой с трудом достигает
+желаемых целей из-за противодействия со стороны противника или сложившихся обстоятельств.](*<-lang_ru;;*);;
+		*);;
+	*);;
+	
+

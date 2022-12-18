@@ -1,0 +1,33 @@
+sc_node_not_relation -> concept_tactile_perception;; 
+
+concept_tactile_perception => nrel_main_idtf:
+[тактильное восприятие](*<-lang_ru;;*);
+[tactile perception](*<-lang_en;;*);;
+
+//определения и пояснения
+concept_tactile_perception <- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf: [Опр. (тактильное восприятие)] (*<-lang_ru;;*);;
+	<-sc_definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_definition:
+			[Тактильное восприятие представлено удобством управления игры.](*<-lang_ru;;*);;
+		*);;
+	*);;
+	
+//утверждения
+concept_tactile_perception <- rrel_key_sc_element:
+	... 
+	(*
+	=> nrel_main_idtf: [Утв.(управление*, видеоигра)] (* <- lang_ru;; *);;
+	<- sc_statement;;
+	<= nrel_sc_text_translation: 
+		...
+		(*
+		-> rrel_example: 
+			[Существуют видеоигры в которых управление можно настроить самостоятельно.](* <- lang_ru;; *);;
+		*);;
+	*);;

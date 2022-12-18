@@ -1,0 +1,47 @@
+sc_node_not_relation -> concept_texture;; 
+
+concept_texture => nrel_main_idtf:
+[текстура](*<-lang_ru;;*);
+[texture](*<-lang_en;;*);;
+
+
+//определения и пояснения
+concept_texture <- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf: [Опр. (текстура)] (*<-lang_ru;;*);;
+	<-sc_definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_definition:
+			[Текстура — растровое изображение, накладываемое на поверхность полигональной модели для придания ей цвета, окраски или иллюзии рельефа.](*<-lang_ru;;*);;
+		*);;
+	*);;
+	
+//утверждения
+concept_texture <- rrel_key_sc_element:
+	... 
+	(*
+	=> nrel_main_idtf: [Утв.(текстура, малые объекты поверхности)] (* <- lang_ru;; *);;
+	<- sc_statement;;
+	<= nrel_sc_text_translation: 
+		...
+		(*
+		-> rrel_example: 
+			[Использование текстур позволяет воспроизвести малые объекты поверхности, создание которых полигонами оказалось бы чрезмерно ресурсоёмким.](* <- lang_ru;; *);;
+		*);;
+	*);;
+	
+concept_texture <- rrel_key_sc_element:...
+	(*
+		<-illustration;;
+		<=nrel_sc_text_translation:...
+	(*
+		->rrel_example:
+		"file://images//texture.png"
+	(*
+		=>nrel_format:format_png;;
+	*);;	
+*);;
+*);;

@@ -1,0 +1,33 @@
+sc_node_not_relation -> concept_runing;; 
+
+concept_runing => nrel_main_idtf:
+[бег](*<-lang_ru;;*);
+[runing](*<-lang_en;;*);;
+
+//определения и пояснения
+concept_runing <- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf: [Опр.(бег)] (*<-lang_ru;;*);;
+	<-sc_definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_definition:
+			[Бег - вид перемещения, при котором игровой персонаж двигается быстро.](*<-lang_ru;;*);;
+		*);;
+	*);;
+	
+//утверждения
+concept_runing <- rrel_key_sc_element:
+	... 
+	(*
+	=> nrel_main_idtf: [Утв.(бег, перемещение)] (* <- lang_ru;; *);;
+	<- sc_statement;;
+	<= nrel_sc_text_translation: 
+		...
+		(*
+		-> rrel_example: 
+			[Бег является основным видом перемещения.](* <- lang_ru;; *);;
+		*);;
+	*);;

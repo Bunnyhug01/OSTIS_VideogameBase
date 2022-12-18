@@ -1,0 +1,56 @@
+sc_node_not_relation -> concept_soft_currency;; 
+
+concept_soft_currency => nrel_main_idtf:
+[мягкая валюта](*<-lang_ru;;*);
+[soft currency](*<-lang_en;;*);;
+
+//определения и пояснения
+concept_soft_currency <- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf: [Опр. (мягкая валюта)] (*<-lang_ru;;*);;
+	<-sc_definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_definition:
+			[Мягкая валюта - валюта общего назначения. Она является основным платёжным средством.](*<-lang_ru;;*);;
+		*);;
+	*);;
+	
+//утверждения
+concept_soft_currency <- rrel_key_sc_element:
+	... 
+	(*
+	=> nrel_main_idtf: [Утв.(мягкая валюта,твёрдая валюта)] (* <- lang_ru;; *);;
+	<- sc_statement;;
+	<= nrel_sc_text_translation: 
+		...
+		(*
+		-> rrel_example: 
+			[Мягкая валюта имеет меньшую ценность, чем твёрдая валюта.](* <- lang_ru;; *);;
+		*);;
+		
+	=> nrel_main_idtf: [Утв.(мягкая валюта,твёрдая валюта)] (* <- lang_ru;; *);;
+	<- sc_statement;;
+	<= nrel_sc_text_translation: 
+		...
+		(*
+		-> rrel_example: 
+			[Мягкую валюту можно получить выполняя игровые квесты и продавая игровые предметы.](* <- lang_ru;; *);;
+		*);;
+		
+	*);;
+	
+concept_soft_currency <- rrel_key_sc_element:...
+	(*
+		<-illustration;;
+		<=nrel_sc_text_translation:...
+	(*
+		->rrel_example:
+		"file://images//soft_currency.png"
+	(*
+		=>nrel_format:format_png;;
+	*);;	
+*);;
+*);;	

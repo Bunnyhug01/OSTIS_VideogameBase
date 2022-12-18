@@ -1,0 +1,32 @@
+sc_node_struct -> section_subject_domain_of_mechanic;;
+
+section_subject_domain_of_mechanic => nrel_main_idtf:
+	[Раздел. Предметная область механики]
+	(* <- lang_ru;; *);
+	[Section. Subject domain of mechanic]
+	(* <- lang_en;; *);
+<- non_atomic_section;;
+
+section_subject_domain_of_mechanic <- nrel_system_identifier;;
+
+section_subject_domain_of_mechanic -> rrel_key_sc_element:
+	subject_domain_of_mechanic;
+	concept_mechanic;
+	concept_moving;
+	concept_shooting;
+	concept_trade;
+	concept_experience;
+	concept_achievements;;
+	
+section_subject_domain_of_mechanic = [*
+	subject_domain_of_mechanic => nrel_main_idtf:
+		[Предметная область механики] (* <- lang_ru;; *);
+		[Subject domain of mechanic] (* <- lang_en;; *);
+	<- subject_domain;;
+	
+	subject_domain_of_mechanic => nrel_private_subject_domain:
+		 subject_domain_of_mechanic;;
+	
+	subject_domain_of_mechanic -> rrel_maximum_studied_object_class:
+		concept_mechanic;;
+*];;

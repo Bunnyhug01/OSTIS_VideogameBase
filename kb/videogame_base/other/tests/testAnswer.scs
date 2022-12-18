@@ -1,0 +1,25 @@
+gamer1
+=> nrel_new_health:
+	220.000000(*=>nrel_main_idtf: [220.000000];;*);
+=> nrel_new_weapon_damage:
+	45.900002(*=>nrel_main_idtf: [45.900002];;*);
+=> nrel_effectiveness:
+	11016.000000(*=>nrel_main_idtf: [11016.000000];;*);;
+
+gamer2
+=> nrel_new_health:
+	64(*=>nrel_main_idtf: [64];;*);
+=> nrel_new_weapon_damage:
+	36(*=>nrel_main_idtf: [36];;*);;
+
+weapon1
+=> nrel_hit_chance:
+	50(*=>nrel_main_idtf: [50%];;*);
+=> nrel_avg_damage:
+	4.000000(*=>nrel_main_idtf: [4.000000];;*);=> nrel_hit_chance:
+	66(*=>nrel_main_idtf: [66%];;*);
+=> nrel_avg_damage:
+	5.333333(*=>nrel_main_idtf: [5.333333];;*);=> nrel_hit_chance:
+	83(*=>nrel_main_idtf: [83%];;*);
+=> nrel_avg_damage:
+	6.666667(*=>nrel_main_idtf: [6.666667];;*);;

@@ -1,0 +1,67 @@
+sc_node_not_relation -> concept_shooting;; 
+
+concept_shooting => nrel_main_idtf:
+[стрельба](*<-lang_ru;;*);
+[shooting](*<-lang_en;;*);;
+
+
+concept_shooting <= nrel_whole_part:
+	...
+	(* 
+	-> rrel_targeting;;
+	-> rrel_aiming;;
+	-> rrel_shot;;
+	-> rrel_hit_registration;;
+	*);;
+
+//определения и пояснения
+concept_shooting <- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf: [Опр. (стрельба)] (*<-lang_ru;;*);;
+	<-sc_definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_definition:
+			[Стрельба - механика, использующаяся огнестрельным и метательным оружием для поражения врагов.](*<-lang_ru;;*);;
+		*);;
+	*);;
+	
+//утверждения
+concept_shooting <- rrel_key_sc_element:
+	... 
+	(*
+	=> nrel_main_idtf: [Утв.(стрельба,огнестрельное оружие,метательное оружие)] (* <- lang_ru;; *);;
+	<- sc_statement;;
+	<= nrel_sc_text_translation: 
+		...
+		(*
+		-> rrel_example: 
+			[Стрельба возможна лишь при использовании огнестрельного и метательного оружия.](* <- lang_ru;; *);;
+		*);;
+	*);
+		... 
+		(*
+		=> nrel_main_idtf: [Утв.(стрельба,компьютерная мышь,геймпад)] (* <- lang_ru;; *);;
+		<- sc_statement;;
+		<= nrel_sc_text_translation: 
+			...
+			(*
+			-> rrel_example: 
+				[Для стрельбы зачастую используется компьютерная мышь(левая кнопка мыши для выстрела и правая кнопки мыши для наведения) или геймпад.](* <- lang_ru;; *);;
+			*);;
+*);;
+
+concept_shooting <- rrel_key_sc_element:...
+	(*
+		<-illustration;;
+		<=nrel_sc_text_translation:...
+	(*
+		->rrel_example:
+		"file://images//shooting.png"
+	(*
+		=>nrel_format:format_png;;
+	*);;	
+*);;
+*);;

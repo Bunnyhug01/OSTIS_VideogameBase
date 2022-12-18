@@ -1,0 +1,55 @@
+sc_node_not_relation -> concept_trade;; 
+
+concept_trade => nrel_main_idtf:
+[торговля](*<-lang_ru;;*);
+[trade](*<-lang_en;;*);;
+
+
+concept_trade <= nrel_whole_part:
+	...
+	(* 
+	-> rrel_buying;;
+	-> rrel_selling;;
+	-> concept_game_currency;;
+	*);;
+
+//определения и пояснения
+concept_trade <- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf: [Опр. (торговля)] (*<-lang_ru;;*);;
+	<-sc_definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_definition:
+			[Торговля - игровая механика, позволяющая игроку приобретать игровые предметы за внутриигровую валюту, или продавать игровые предметы, получая внутриигровую валюту.](*<-lang_ru;;*);;
+		*);;
+	*);;
+	
+//утверждения
+concept_trade <- rrel_key_sc_element:
+	... 
+	(*
+	=> nrel_main_idtf: [Утв.(торговля,торговец)] (* <- lang_ru;; *);;
+	<- sc_statement;;
+	<= nrel_sc_text_translation: 
+		...
+		(*
+		-> rrel_example: 
+			[Торговля осуществляется через торговцев(неигровых персонажей).](* <- lang_ru;; *);;
+		*);;
+	*);;
+	
+concept_trade <- rrel_key_sc_element:...
+	(*
+		<-illustration;;
+		<=nrel_sc_text_translation:...
+	(*
+		->rrel_example:
+		"file://images//trade.png"
+	(*
+		=>nrel_format:format_png;;
+	*);;	
+*);;
+*);;	

@@ -1,0 +1,45 @@
+sc_node_not_relation -> concept_moving;; 
+
+concept_moving => nrel_main_idtf:
+[перемещение](*<-lang_ru;;*);
+[moving](*<-lang_en;;*);;
+
+//разбиение
+concept_moving <= nrel_subdividing:
+	...
+	(* 
+	-> concept_walking;;
+	-> concept_runing;;
+	-> concept_sprint;;
+	-> concept_jumping;;
+	-> concept_flight;;
+	-> concept_fast_travel;;
+	*);;
+
+//определения и пояснения
+concept_moving <- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf: [Опр.(перемещение)] (*<-lang_ru;;*);;
+	<-sc_definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_definition:
+			[Перемещение — это механика, которая позволяет менять местоположение игрока в пространстве.](*<-lang_ru;;*);;
+		*);;
+	*);;
+	
+//утверждения
+concept_moving <- rrel_key_sc_element:
+	... 
+	(*
+	=> nrel_main_idtf: [Утв.(перемещение,клавиатура,геймпад)] (* <- lang_ru;; *);;
+	<- sc_statement;;
+	<= nrel_sc_text_translation: 
+		...
+		(*
+		-> rrel_example: 
+			[Для перемещения зачастую используется клавиатура (кнопки WASD или стрелочки, кнопка пробел) или геймпад.](* <- lang_ru;; *);;
+		*);;
+	*);;

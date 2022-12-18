@@ -1,0 +1,28 @@
+sc_node_not_relation -> concept_enemy;; 
+
+concept_enemy => nrel_main_idtf:
+[враг](*<-lang_ru;;*);
+[enemy](*<-lang_en;;*);;
+
+
+concept_enemy <= nrel_basic_decomposition:
+	...
+	(* 
+	-> concept_health;;
+	-> concept_weapon;;
+	-> concept_armor;;
+	*);;
+
+//определения и пояснения
+concept_enemy <- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf: [Опр. (враг)] (*<-lang_ru;;*);;
+	<-sc_definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_definition:
+			[Враг —  персонаж в играх, который не находится под контролем игрока, и целью которого является препятствовать достижениям различных целей игрока.](*<-lang_ru;;*);;
+		*);;
+	*);;

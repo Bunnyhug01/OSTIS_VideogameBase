@@ -1,0 +1,48 @@
+sc_node_role_relation -> rrel_buying;; 
+
+rrel_buying => nrel_main_idtf:
+[покупка*](*<-lang_ru;;*);
+[buying*](*<-lang_en;;*);;
+
+rrel_buying <- ...(*
+	<- sc_node_not_relation;;
+	<- arity;;
+	=> number_two;;
+*);;
+
+rrel_buying
+ 	=> nrel_first_domain: concept_gamer;
+ 	=> nrel_second_domain: concept_trader;;
+ 	
+rrel_buying
+ 	-> antitransitive_relation;
+ 	-> antireflexive_relation;
+ 	-> antisymmetric_relation;;
+
+//определения и пояснения
+rrel_buying <- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf: [Опр. (покупка*)] (*<-lang_ru;;*);;
+	<-sc_definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_definition:
+			[Покупка* - часть торговли, в которой игрок получает игровые предметы за внутриигровую валюту.](*<-lang_ru;;*);;
+		*);;
+	*);;
+	
+//утверждения
+rrel_buying <- rrel_key_sc_element:
+	... 
+	(*
+	=> nrel_main_idtf: [Утв.(покупка*,внутриигровая валюта)] (* <- lang_ru;; *);;
+	<- sc_statement;;
+	<= nrel_sc_text_translation: 
+		...
+		(*
+		-> rrel_example: 
+			[При нехватке внутриигровой валюты покупка становится недоступной.](* <- lang_ru;; *);;
+		*);;
+	*);;

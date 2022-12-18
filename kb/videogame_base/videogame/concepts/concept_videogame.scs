@@ -1,0 +1,66 @@
+sc_node_not_relation -> concept_videogame;; 
+
+concept_videogame => nrel_main_idtf:
+[видеоигра](*<-lang_ru;;*);
+[videogame](*<-lang_en;;*);;
+
+concept_videogame <= nrel_whole_part:
+	...
+	(* 
+	-> concept_mechanic;;
+	-> concept_story;;
+	-> concept_aesthetic;;
+	-> concept_technology;;
+	*);;
+
+//определения и пояснения
+concept_videogame <- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf: [Опр. (видеоигра)] (*<-lang_ru;;*);;
+	<-sc_definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_definition:
+			[Видеоигра — разновидность игры, ведущейся путём взаимодействия игрока и электронной системы, в которой устройство визуального отображения (дисплей) является основным механизмом, обеспечивающим обратную связь с игроком.](*<-lang_ru;;*);;
+		*);;
+	*);;
+	
+//утверждения
+concept_videogame <- rrel_key_sc_element:
+	... 
+	(*
+	=> nrel_main_idtf: [Утв.(видеоигра,компьютер,игровая консоль,игровой автомат,портативное игровое устройсто,мобильный телефон)] (* <- lang_ru;; *);;
+	<- sc_statement;;
+	<= nrel_sc_text_translation: 
+		...
+		(*
+		-> rrel_example: 
+			[В видеоигры можно играть на компьютерах, игровых консолях, игровых автоматах, портативных игровых устройствах, мобильных телефонах. ](* <- lang_ru;; *);;
+		*);;
+	*);
+	... 
+	(*
+	=> nrel_main_idtf: [Утв.(видеоигра, интерактивность*)] (* <- lang_ru;; *);;
+	<- sc_statement;;
+	<= nrel_sc_text_translation: 
+		...
+		(*
+		-> rrel_example: 
+			[Интерактивность отличает видеоигры от других видов искусств.](* <- lang_ru;; *);;
+		*);;
+	*);;
+	
+concept_videogame <- rrel_key_sc_element:...
+	(*
+		<-illustration;;
+		<=nrel_sc_text_translation:...
+	(*
+		->rrel_example:
+		"file://images//mario_game.jpg"
+	(*
+		=>nrel_format:format_jpg;;
+	*);;	
+*);;
+*);;

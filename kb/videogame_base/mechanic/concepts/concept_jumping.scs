@@ -1,0 +1,46 @@
+sc_node_not_relation -> concept_jumping;; 
+
+concept_jumping => nrel_main_idtf:
+[прыжок](*<-lang_ru;;*);
+[jumping](*<-lang_en;;*);;
+
+//определения и пояснения
+concept_jumping <- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf: [Опр.(прыжок)] (*<-lang_ru;;*);;
+	<-sc_definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_definition:
+			[Прыжок - вид перемещения, при котором игровой персонаж подскакивает вверх, а затем опускается вниз.](*<-lang_ru;;*);;
+		*);;
+	*);;
+	
+//утверждения
+concept_jumping <- rrel_key_sc_element:
+	... 
+	(*
+	=> nrel_main_idtf: [Утв.(прыжок, поверхность)] (* <- lang_ru;; *);;
+	<- sc_statement;;
+	<= nrel_sc_text_translation: 
+		...
+		(*
+		-> rrel_example: 
+			[Прыжок позволяет забираться на поверхности, находящиеся на уровень выше.](* <- lang_ru;; *);;
+		*);;
+	*);;
+	
+concept_jumping <- rrel_key_sc_element:...
+	(*
+		<-illustration;;
+		<=nrel_sc_text_translation:...
+	(*
+		->rrel_example:
+		"file://images//jumping.jpg"
+	(*
+		=>nrel_format:format_jpg;;
+	*);;	
+*);;
+*);;	

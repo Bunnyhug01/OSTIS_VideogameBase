@@ -1,0 +1,34 @@
+sc_node_not_relation -> concept_dialogs_sound;; 
+
+concept_dialogs_sound => nrel_main_idtf:
+[озвучка диалогов](*<-lang_ru;;*);
+[dialogs sound](*<-lang_en;;*);;
+
+
+//определения и пояснения
+concept_dialogs_sound <- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf: [Опр. (озвучка диалогов)] (*<-lang_ru;;*);;
+	<-sc_definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_definition:
+			[Озвучка диалогов - звуковое сопровождение внутриигровых диалогов.](*<-lang_ru;;*);;
+		*);;
+	*);;
+	
+//утверждения
+concept_dialogs_sound <- rrel_key_sc_element:
+	... 
+	(*
+	=> nrel_main_idtf: [Утв.(озвучка диалогов, сложная информация)] (* <- lang_ru;; *);;
+	<- sc_statement;;
+	<= nrel_sc_text_translation: 
+		...
+		(*
+		-> rrel_example: 
+			[Оптимальным вариантом использования озвучки диалогов является передача сложной информации.](* <- lang_ru;; *);;
+		*);;
+	*);;

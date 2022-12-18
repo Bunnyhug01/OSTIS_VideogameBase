@@ -1,0 +1,42 @@
+sc_node_not_relation -> concept_sound_perception;; 
+
+concept_sound_perception => nrel_main_idtf:
+[звуковое восприятие](*<-lang_ru;;*);
+[sound perception](*<-lang_en;;*);;
+
+//разбиение
+concept_sound_perception <= nrel_subdividing:
+	...
+	(* 
+	-> concept_sound_effects;;
+	-> concept_music;;
+	-> concept_dialogs_sound;;
+	*);;
+
+//определения и пояснения
+concept_sound_perception <- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf: [Опр. (звуковое восприятие)] (*<-lang_ru;;*);;
+	<-sc_definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_definition:
+			[Звуковое восприятие - слышимые элементы игры, т.е. всё, что игрок слышит.](*<-lang_ru;;*);;
+		*);;
+	*);;
+	
+//утверждения
+concept_sound_perception <- rrel_key_sc_element:
+	... 
+	(*
+	=> nrel_main_idtf: [Утв.(звуковое сопровождение, количество времени*)] (* <- lang_ru;; *);;
+	<- sc_statement;;
+	<= nrel_sc_text_translation: 
+		...
+		(*
+		-> rrel_example: 
+			[Все элементы звукового сопровождения требуют разного количества времени для интерпретации игроком.](* <- lang_ru;; *);;
+		*);;
+	*);;

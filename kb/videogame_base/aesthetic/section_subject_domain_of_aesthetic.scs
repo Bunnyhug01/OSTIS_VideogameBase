@@ -1,0 +1,28 @@
+sc_node_struct -> section_subject_domain_of_aesthetic;;
+
+section_subject_domain_of_aesthetic => nrel_main_idtf:
+	[Раздел. Предметная область эстетики]
+	(* <- lang_ru;; *);
+	[Section. Subject domain of aesthetic]
+	(* <- lang_en;; *);
+<- non_atomic_section;;
+
+section_subject_domain_of_aesthetic <- nrel_system_identifier;;
+
+section_subject_domain_of_aesthetic -> rrel_key_sc_element:
+	subject_domain_of_aesthetic;
+	concept_aesthetic;;
+	
+section_subject_domain_of_aesthetic = [*
+	subject_domain_of_aesthetic => nrel_main_idtf:
+		[Предметная область эстетики] (* <- lang_ru;; *);
+		[Subject domain of aesthetic] (* <- lang_en;; *);
+	<- subject_domain;;
+	
+	subject_domain_of_aesthetic => nrel_private_subject_domain:
+		 subject_domain_of_aesthetic;;
+	
+	subject_domain_of_aesthetic -> rrel_maximum_studied_object_class:
+		concept_aesthetic;;
+*];;
+

@@ -1,0 +1,16 @@
+gamer2
+<- concept_gamer;
+=> nrel_main_idtf:
+	[Gamer 2]
+	(* <- lang_en;; <- name_en;;*);
+	[Игрок 2]
+	(* <- lang_ru;; <- name_ru;; <- name;;*);
+	
+=> nrel_health:
+	100(*=>nrel_main_idtf: [100];;*);
+=> nrel_damage_threshold:
+	20(*=>nrel_main_idtf: [20];;*);
+=> nrel_damage_resistance:
+	30(*=>nrel_main_idtf: [30%];;*);
+=> nrel_weapon_damage:
+	80(*=>nrel_main_idtf: [80];;*);;

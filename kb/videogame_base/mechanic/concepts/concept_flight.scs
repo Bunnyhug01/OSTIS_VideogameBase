@@ -1,0 +1,32 @@
+sc_node_not_relation -> concept_flight;; 
+
+concept_flight => nrel_main_idtf:
+[полёт](*<-lang_ru;;*);
+[flight](*<-lang_en;;*);;
+
+//определения и пояснения
+concept_flight <- rrel_key_sc_element:
+	...
+	(*
+	=> nrel_main_idtf: [Опр.(полёт)] (*<-lang_ru;;*);;
+	<-sc_definition;;
+	<= nrel_sc_text_translation:
+		...
+		(*
+		-> rrel_definition:
+			[Полёт - вид перемещения, при котором игровой персонаж передвигается не соприкасаясь с поверхностью.](*<-lang_ru;;*);;
+		*);;
+	*);;
+
+concept_flight <- rrel_key_sc_element:...
+	(*
+		<-illustration;;
+		<=nrel_sc_text_translation:...
+	(*
+		->rrel_example:
+		"file://images//flight.png"
+	(*
+		=>nrel_format:format_png;;
+	*);;	
+*);;
+*);;
